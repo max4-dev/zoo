@@ -1,3 +1,32 @@
+html,
+body {
+  height: 100%;
+}
+
 body{
-  
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: $default;
+  display: flex;
+  flex-direction: column;
+  // font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+  flex-grow: 1;
+  padding-top: 102px;
+}
+
+.container {
+  max-width: 1460px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.container-l{
+  max-width: 1800px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
