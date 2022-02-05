@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header{
@@ -12,6 +13,7 @@
   padding: 10px 0 12px;
   border-bottom: 1px solid #F4F4F4;
   transition: all .5s;
+  z-index: 1000;
   &-fixed{
     position: fixed;
     top: 0;
@@ -167,7 +169,7 @@
 }
 
 .aside{
-  padding-top: 50px;
+  padding: 50px 0;
   &__item+.aside__item{
     margin-top: 50px;
   }
@@ -187,6 +189,119 @@
       font-weight: 700;
     }
   }
+}
+
+.account{
+  &__inner{
+    display: flex;
+  }
+  &-content{
+    width: 800px;
+    margin-right: 30px;
+    margin-left: auto;
+    padding-top: 20px;
+  }
+  &-content__header-img{
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+}
+
+.info{
+  padding-top: 20px;
+  padding-bottom: 50px; 
+  border: 1px solid #F4F4F4;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px 0 50px;
+  }
+  &__user{
+    display: flex;
+  }
+  &__avatar{
+    padding: 3px;
+    background-color: #fff;
+    height: 134px;
+    height: 134px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -75px;
+  }
+  &__name{
+    margin-left: 30px;
+  }
+  &__title{
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 31px;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 21px;
+    color: #606162;
+    margin-bottom: 20px;
+  }
+  &__num{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration: underline;
+    display: inline-block;
+    color: #606162;
+    margin-left: 10px;
+  }
+  &__rate{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.info-send{
+  display: flex;
+  align-items: center;
+  &__btn{
+    background: #6EBD1E;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 17px;
+    padding-left: 43px;
+    border: none;
+    position: relative;
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icons/send.svg');
+      left: 17px;
+      background-repeat: no-repeat;
+      top: 15px;
+    }
+  }
+  &__favorite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #6EBD1E;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+
+.filter{
+  width: 321px;
 }
 
 .footer{
